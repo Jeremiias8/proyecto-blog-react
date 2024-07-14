@@ -1,35 +1,40 @@
 import { useState } from "react";
 
+import programmingOffice from '../../assets/img/programer-working.jpg'
+import programmingBack from '../../assets/img/programming-back.jpg'
+
 export const Articulos = () => {
 
-  const [articulo, setArticulo] = useState([]);
+  const [articulos, setArticulos] = useState([]);
 
   const añadirArticulo = ({target}) => {
 
-    let articuloContainer = document.querySelector(".peli-item");
+    let articuloContainer = document.querySelector(".articulo-item");
 
-    let nuevoArticulo = {
+    /* let nuevoArticulo = {
       id: target.id,
       title: target.title,
       description: target.description
-    };
+    }; */
 
-    setArticulo([...articulo, nuevoArticulo]);
-    console.log(articulo);
+    setArticulos([...articulos, articuloContainer]);
+    console.log(articulos);
 
   }
-
+ 
   const borrarArticulo = () => {
 
-    let articuloLimpio = {
+    let articuloContainer = document.querySelector(".articulo-item");
+    /* let articuloLimpio = {
       id: null,
       title: null,
       description: null
-    };
+    }; */
 
     setTimeout(() => {
 
-      setArticulo(articuloLimpio);
+      // setArticulo(articuloLimpio);
+      articuloContainer.remove();
 
     }, 2000);
 
@@ -38,7 +43,17 @@ export const Articulos = () => {
   return (
     <>
 
-      <article className='peli-item'>
+      <div className="articulos-container-length">
+        <span>Número de artículos: </span> {articulos.length}
+      </div>
+
+      <article className='articulo-item article-one'>
+        
+        <div className="mascara">
+          <img src={programmingOffice} 
+            className="m-2 p-2 w-50 img-fluid img-thumbnail" />
+        </div>
+        
         <h3 className='title'>Desarrollo Web</h3>
         <p className='description'>jereweb.es</p>
 
@@ -55,30 +70,72 @@ export const Articulos = () => {
 
       </article>
 
-      <article className='peli-item'>
+      <article className='articulo-item'>
+        
+        <div className="mascara">
+          <img src={programmingBack}
+            className="m-2 p-2 w-50 img-fluid img-thumbnail" />
+        </div>
+
         <h3 className='title'>Desarrollo Web</h3>
         <p className='description'>jereweb.es</p>
 
-        <button className='edit'>Editar</button>
-        <button className='delete'>Borrar</button>
+        <button className='edit'
+          onClick={añadirArticulo}
+        >
+          Editar
+        </button>
+        <button className='delete'
+          onClick={borrarArticulo}
+        >
+          Borrar
+        </button>
 
       </article>
 
-      <article className='peli-item'>
+      <article className='articulo-item'>
+        
+        <div className="mascara">
+          <img src={programmingOffice} 
+            className="m-2 p-2 w-50 img-fluid img-img-thumbnail" />
+        </div>
+        
         <h3 className='title'>Desarrollo Web</h3>
         <p className='description'>jereweb.es</p>
 
-        <button className='edit'>Editar</button>
-        <button className='delete'>Borrar</button>
+        <button className='edit'
+          onClick={añadirArticulo}
+        >
+          Editar
+        </button>
+        <button className='delete'
+          onClick={borrarArticulo}
+        >
+          Borrar
+        </button>
 
       </article>
 
-      <article className='peli-item'>
+      <article className='articulo-item'>
+        
+        <div className="mascara">
+          <img src={programmingBack} 
+            className="m-2 p-2 w-50 img-fluid img-thumbnail" />
+        </div>
+        
         <h3 className='title'>Desarrollo Web</h3>
         <p className='description'>jereweb.es</p>
 
-        <button className='edit'>Editar</button>
-        <button className='delete'>Borrar</button>
+        <button className='edit'
+          onClick={añadirArticulo}
+        >
+          Editar
+        </button>
+        <button className='delete'
+          onClick={borrarArticulo}
+        >
+          Borrar
+        </button>
 
       </article>
 

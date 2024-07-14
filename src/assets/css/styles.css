@@ -73,13 +73,13 @@ p {
     background: #f6f7f9;
 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: initial;
     flex-grow: 1;
 }
 
-.peli-item{
+.articulo-item{
     flex-grow: 1;
     background: white;
     border-radius: 10px;
@@ -134,15 +134,15 @@ input[type="button"] {
     transition: all 300ms;
 }
 
-.peli-item > .edit {
+.articulo-item > .edit {
     margin: 1rem;
 }
 
-.peli-item .edit:hover{
+.articulo-item .edit:hover{
     background: #e77b00;
 }
 
-.peli-item .delete:hover{
+.articulo-item .delete:hover{
     background: #9b0202;
 }
 
@@ -216,7 +216,7 @@ input[type="button"] {
         align-items: center;
     }
 
-    .peli-item{
+    .articulo-item{
         width: 80%;
     }
 }
