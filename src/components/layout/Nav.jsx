@@ -24,7 +24,7 @@ export const Nav = () => {
                 </li>
 
                 <li>
-                    <NavLink to="/" className='m-2'>Contacto</NavLink>
+                    <NavLink to="/contacto" className='m-2'>Contacto</NavLink>
                 </li>
             </ul>
         </nav>
